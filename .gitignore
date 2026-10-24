@@ -1,0 +1,5 @@
+# Ne jamais publier de vraies failles ou donnees d'entreprise
+*.secret
+perimetre/
+cibles-reelles/
+*.key
