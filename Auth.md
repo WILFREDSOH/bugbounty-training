@@ -22,3 +22,11 @@
 - Impact : reinitialisation du mot de passe de n'importe quel compte -> prise de compte
 - Correction : lier le token au compte cote serveur, ne jamais se fier a un username fourni par le client
 - REFLEXE : un jeton (reset, session, verif) doit etre valide cote serveur et lie a son proprietaire
+
+
+## Juice Shop - Who broke my lock
+- Brute force admin : Burp Intruder sur password, email=admin@juice-sh.op, liste SecLists -> admin123
+- Faille : mot de passe faible + aucune limite de tentatives
+- Reset Jim : question de securite "eldest sibling's middle name" -> Jim=Kirk (Star Trek) -> Samuel
+- Faille : question de securite devinable par OSINT (indice laisse dans un avis)
+- Corrections : limiter les tentatives, mdp forts, abandonner les questions de securite
