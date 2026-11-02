@@ -46,3 +46,11 @@
 - Exploitation : '-alert(1)-' -> ferme la chaine, execute alert, garde la syntaxe valide
 - CLE : 3e contexte = dans du JS -> sortir de la chaine et ecrire du code valide
 - Correction : encoder les apostrophes/guillemets dans le contexte JS
+
+
+## Juice Shop - Where did that come from (DOM XSS)
+- Contexte : appli Angular qui neutralise <script>
+- Source : barre de recherche ; sink : insertion DOM
+- Payload : <iframe src="javascript:alert(`xss`)">  (accents graves autour de xss)
+- CLE : <script> bloque -> iframe + URL javascript: qui s'execute au chargement
+- Correction : assainir la sortie selon le contexte (Angular le fait mal ici)

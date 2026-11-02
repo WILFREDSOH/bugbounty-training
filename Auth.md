@@ -30,3 +30,11 @@
 - Reset Jim : question de securite "eldest sibling's middle name" -> Jim=Kirk (Star Trek) -> Samuel
 - Faille : question de securite devinable par OSINT (indice laisse dans un avis)
 - Corrections : limiter les tentatives, mdp forts, abandonner les questions de securite
+
+
+## Juice Shop - Who's flying this thing (Broken Authentication)
+- MC SafeSearch : mc.safesearch@juice-sh.op / Mr. N00dles (nom d'animal en leetspeak, divulgue dans sa video)
+- Bjoern OWASP : reset via question de securite "favorite pet" -> Zaya (OSINT sur le createur)
+- Faille : mots de passe et questions de securite devinables par recherche publique (OSINT)
+- Corrections : mots de passe forts et non personnels, abandonner les questions de securite
+- REFLEXE : avant de brute-forcer, chercher les indices que la cible a laisses (profils, contenus publics)

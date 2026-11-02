@@ -20,3 +20,11 @@
 - Impact : fuite du code source et de secrets codes en dur (mdp, cles API)
 - Correction : ne jamais deployer de fichiers .bak/.old sur un serveur public
 - REFLEXE : tester les extensions .bak .old .save .zip .txt sur les fichiers reperes
+
+
+## Juice Shop - AH! Don't look (Sensitive Data Exposure)
+- Dossier public expose : /ftp liste des fichiers -> acquisitions.md (document confidentiel)
+- Telechargement restreint (.md/.pdf seulement) contourne par Poison Null Byte : package.json.bak%2500.md
+- Impact : fuite de documents internes et de fichiers de sauvegarde
+- Corrections : ne pas exposer de dossier de fichiers, valider le type reel et non le nom
+- REFLEXE : tester /ftp /files /uploads /backup ; se mefier des filtres bases sur le nom de fichier

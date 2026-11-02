@@ -50,3 +50,11 @@
 - Impact : vol de donnees malgre une "protection" par redirection
 - Correction : ne renvoyer aucune donnee sensible dans une reponse de redirection
 - REFLEXE : toujours lire la reponse dans Burp, pas seulement l'ecran du navigateur
+
+
+## Juice Shop - Broken Access Control
+- Page admin cachee : route /#/administration trouvee dans main.js (comme lab 2 controle d'acces)
+- IDOR panier : GET /rest/basket/1 -> changer l'ID (2, 3...) pour voir le panier d'un autre
+- Fonction reservee : une fois admin, suppression des avis 5 etoiles (acces non autorise a une fonction)
+- Impact : acces aux donnees et fonctions d'autres utilisateurs
+- Correction : verifier cote serveur, a CHAQUE requete, que l'utilisateur a le droit sur la ressource
